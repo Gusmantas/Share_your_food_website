@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Share Your Food!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="header-div">
+            <h1>Share Your Dinner!</h1> <br> <br>
+            <div class="topnav">
+                <a href="#add-meals">Add Meal</a> <br>
+                        <a>What is Food?</a> <br>
+                        <a>Contact Us</a> <br>
+                        <div id="topnav-btn">
+                            <a href="#signup-form"><button id="sign-up">Sign-Up</button></a>
+                            <a><button id="sign-in">Sign-In</button></a>
+                        </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <hr>
+
+    <ul id="meal-list"></ul>
+    <!--
+    <article>
+        <p id="intro"> Howdy! This is a small web-page, that lets you upload your meal, rate it, and tell other people
+            where to order it.
+            You also might want to add a little description about it, like where is it coming from,
+            possible history or even a recipe (you can also upload a video) on how to make it at home!</p><br>
+
+        <h3>Food?</h3>
+        <p>Food is something that attracts everyone, man or animal, and it's been around since the beginning of time!
+            Nowadays, food is not that hard to come by, and there are millions of different dishes from around the
+            world. </p>
+    </article>
+-->
+
+
+    <!-- SIGN UP !-->
+
+
+
+
+
+<hr>
+    <form id="signup-form" style="border:1px solid #ccc">
+        <div class="container">
+            <h1 class="form-headers">Sign Up:</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="username"><b>User Name:</b></label>
+            <input type="text" placeholder="Choose username" name="username" id="username" autocomplete="username"
+                required> <br>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" autocomlete="email" required> <br>
+
+            <label for="first-name"><b>First Name:</b></label>
+            <input type="text" placeholder="Enter Your First Name" name="first-name" id="first-name" required> <br>
+
+            <label for="last-name"><b>Last Name:</b></label>
+            <input type="text" placeholder="Enter Your Last Name" name="last-name" id="last-name" required> <br>
+
+            <label for="password"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password"
+                autocomplete="new-password" required> <br>
+
+            <label for="psw-repeat"><b>Repeat Password:</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"
+                autocomplete="new-password" required> <br>
+
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me <br>
+
+            <div class="clear-submit">
+                <button type="reset" id="cancel-user" class="cancel">Cancel</button>
+                <button type="submit" id="submit-user" class="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+
+
+    <!-- ADD MEAL !-->
+
+
+    <form id="add-meals" style="border:1px solid #ccc">
+
+        <div class="container">
+            <h1 class="form-headers">Add Meal:</h1>
+            <hr>
+
+            <label for="meal-name"><b>Name:</b></label>
+            <input id="meal-name" placeholder="add meal name" type="text"> <br>
+
+            <label for="category"><b>Category:</b></label> <br>
+            <select name="category" id="category">
+                <option value="Beef">Beef</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Fish">Fish</option>
+                <option value="Pork">Pork</option>
+                <option value="Sweets">Sweets</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Vegetarian">Vegetarian</option>
+            </select> <br> <br>
+
+            <label for="meal-origin"><b>Origin:</b></label>
+            <input id="meal-origin" placeholder="Continent?" type="text"> <br>
+
+            <label for="meal-country"><b>Country:</b></label>
+            <input id="meal-country" placeholder="Country?" type="text"> <br>
+
+            <label for="add-picture"><b>Picture:</b></label> <br>
+            <input type="file" name="picture" id="add-picture" accept="image/*"> <br> <br>
+
+            <label for="meal-description"><b>Description:</b></label> <br>
+            <textarea id="meal-description" placeholder="Add recipe and description here.." cols="30"
+                rows="10"></textarea> <br>
+
+            <div class="clear-submit">
+                <button type="reset" id="cancel-meal" class="cancel">Clear</button>
+                <button type="submit" id="submit-meal" class="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Webpage scripts !-->
+    <div>
+        <script src="/js/Person.js"></script>
+        <script src="/js/User.js"></script>
+        <script src="/js/Meal.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Font settings for entire page */
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+}
+
+/* sets image to header, and darkens the image*/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/header\ image.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+/*Header text position*/
+#header-div {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 10%;
+}
+/*Header text settings*/
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 300%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+
+/* Navigation bar */
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(2, 161, 10, 0.479);
+  color: black;
+  border-radius: 100px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+/* Sign up form */
+
+  /* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgba(37, 236, 11, 0.788);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 60px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancel {
+  padding: 14px 20px;
+  background-color: #fd1c0b;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancel,
+.submit {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clear-submit::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancel,
+  .submit {
+    width: 100%;
+  }
+}
+
+
+/* Entire webpage form settings*/
+form {
+  display: flex;
+  background-color: rgba(170, 146, 9, 0.466);
+  color: rgba(175, 49, 49, 0.774);
+  border-radius: 20px;
+  box-shadow: 0 0 9px rgb(250, 5, 5);
+  width: 400px;
+  height: 735px;
+  margin: auto;
+  position: relative;
+}
+
+.form-headers {
+  font-weight: 200;
+  font-size: 30px;
+}
+
+/*Javascript array (add meal) list settings*/
+#meal-list{
+  display: flex;
+   
+  flex-wrap: wrap;
+}
+
+li{
+ align-items: stretch;
+ justify-content: space-evenly;
+}
