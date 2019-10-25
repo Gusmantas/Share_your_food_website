@@ -15,13 +15,13 @@
         <div id="header-div">
             <h1>Share Your Dinner!</h1> <br> <br>
             <div class="topnav">
-                <a href="#add-meals">Add Meal</a> <br>
-                        <a>What is Food?</a> <br>
-                        <a>Contact Us</a> <br>
-                        <div id="topnav-btn">
-                            <a href="#signup-form"><button id="sign-up">Sign-Up</button></a>
-                            <a><button id="sign-in">Sign-In</button></a>
-                        </div>
+                <a href="#add-meals"><button id="show-meal-form">Add Meal</button></a> <br>
+                <a id="addmeal-button"><button>What is Food?</button></a> <br>
+                <a><button>Contact Us</button></a> <br>
+                <div id="topnav-btn">
+                    <a href="#signup-form"><button id="sign-up">Sign-Up</button></a>
+                    <a><button id="sign-in">Sign-In</button></a>
+                </div>
             </div>
 
         </div>
@@ -32,20 +32,29 @@
 
     <hr>
 
-    <ul id="meal-list"></ul>
-    <!--
-    <article>
-        <p id="intro"> Howdy! This is a small web-page, that lets you upload your meal, rate it, and tell other people
-            where to order it.
-            You also might want to add a little description about it, like where is it coming from,
-            possible history or even a recipe (you can also upload a video) on how to make it at home!</p><br>
 
+
+
+
+    <article>
+        <p id="intro"> Howdy! This is a small web-page, that lets you upload your meal, for others to see! Feel free to
+            add picture, description
+            or even a recipe on how to make it! Take a look at meals somebody else have uploaded here and get
+            inspiration!
+        </p><br>
+        <hr>
+        <ul id="meal-list">
+            <img id="image-output">
+        </ul>
+    </article>
+
+    <!--
         <h3>Food?</h3>
         <p>Food is something that attracts everyone, man or animal, and it's been around since the beginning of time!
             Nowadays, food is not that hard to come by, and there are millions of different dishes from around the
             world. </p>
-    </article>
--->
+    
+    -->
 
 
     <!-- SIGN UP !-->
@@ -54,8 +63,8 @@
 
 
 
-<hr>
-    <form id="signup-form" style="border:1px solid #ccc">
+    <hr>
+    <form id="signup-form">
         <div class="container">
             <h1 class="form-headers">Sign Up:</h1>
             <p>Please fill in this form to create an account.</p>
@@ -96,7 +105,7 @@
     <!-- ADD MEAL !-->
 
 
-    <form id="add-meals" style="border:1px solid #ccc">
+    <form id="add-meals">
 
         <div class="container">
             <h1 class="form-headers">Add Meal:</h1>
@@ -125,6 +134,7 @@
             <label for="add-picture"><b>Picture:</b></label> <br>
             <input type="file" name="picture" id="add-picture" accept="image/*"> <br> <br>
 
+
             <label for="meal-description"><b>Description:</b></label> <br>
             <textarea id="meal-description" placeholder="Add recipe and description here.." cols="30"
                 rows="10"></textarea> <br>
@@ -140,6 +150,7 @@
     <div>
         <script src="/js/Person.js"></script>
         <script src="/js/User.js"></script>
+        <script src="/js/MealPictures.js"></script>
         <script src="/js/Meal.js"></script>
         <script src="js/main.js"></script>
     </div>

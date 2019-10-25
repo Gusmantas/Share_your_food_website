@@ -4,15 +4,14 @@ class Meal {
     _category = '';
     _origin = '';
     _country = '';
-    _picture = null;
+    _pictures = new MealPictures();
     _description = '';
 
-    constructor(name, category, origin, country, picture, description) {
+    constructor(name, category, origin, country, description) {
         this._name = name;
         this._category = category;
         this._origin = origin;
         this._country = country;
-        this._picture = picture;
         this._description = description;
     }
 
@@ -37,7 +36,7 @@ class Meal {
         return this._country;
     }
 
-    get picture(){
+    get picture() {
         return this._picture;
     }
 
@@ -45,22 +44,27 @@ class Meal {
         return this._description;
     }
 
-    toString(){
-
-        return`
-            <li>
-            Name: ${this._name}
-            <br>
-            Category: ${this._category}
-            <br>
-            Origin: ${this._origin}
-            <br>
-            Country: ${this._country}
-            <br>
-            ${this._picture}
-            <br>
-            Description: ${this._description}
-            </li>
+    toString() {
+        return `
+            <section class="image-output">
+                ${this._pictures}
+            </section>
         `;
     }
 }
+/*
+ <li>
+        Name: ${this._name}
+        <br>
+        Category: ${this._category}
+        <br>
+        Origin: ${this._origin}
+        <br>
+        Country: ${this._country}
+        <br>
+        ${this._picture}
+        <br>
+        Description: ${this._description}
+        </li>
+
+*/

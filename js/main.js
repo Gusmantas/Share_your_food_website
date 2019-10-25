@@ -23,12 +23,20 @@ submitButton.onclick = function (event) {
     repeatPassword = '';
     firstName.value = '';
     lastName.value = '';
+    // Hide sign-up form
+    document.querySelector("#signup-form").style.display = 'block';
+}
+
+// Pop-up "sign-up form" window
+let signupButton = document.querySelector("#sign-up")
+signupButton.onclick = function () {
+    document.querySelector("#signup-form").style.display = 'block';
 }
 
 
-//Add meal form, and pushing meals to array
+//Add meal form, and pushing meals to array, show image on main page
 
-meals = [];
+let meals = [];
 let mealName = document.querySelector("#meal-name");
 let mealCategory = document.querySelector("#category");
 let mealOrigin = document.querySelector("#meal-origin");
@@ -36,28 +44,41 @@ let mealCountry = document.querySelector("#meal-country");
 let mealPicture = document.querySelector("#add-picture");
 let mealDescription = document.querySelector("#meal-description");
 let displayMeals = document.querySelector("#meal-list");
-
 let submitMeal = document.querySelector("#submit-meal");
+let activeMealImage = '';
 
 submitMeal.onclick = function (event) {
     event.preventDefault();
-    
     let newMeal = new Meal(mealName.value, mealCategory.value, mealOrigin.value, mealCountry.value, mealPicture.value, mealDescription.value);
-
+    newMeal._pictures.addMeal(activeMealImage)
     meals.push(newMeal);
 
-    displayMeals.innerHTML = meals;
-    
-  
+    displayMeals.innerHTML = meals
+
+    //displayMeals.innerHTML = meals;
     console.log(meals)
 
+    // Clear all inputs
     mealName.value = '';
     mealCategory.value = '';
     mealOrigin.value = '';
     mealCountry.value = '';
     mealPicture.value = '';
     mealDescription.value = '';
+//hide add meal form
+    document.querySelector("#add-meals").style.display = 'none';
+}
+
+//Pop-up "add-meal" window
+let addmealButton = document.querySelector("#show-meal-form");
+addmealButton.onclick = function () {
+    document.querySelector("#add-meals").style.display = 'block';
 }
 
 
- 
+// Display added image in webpage
+mealPicture.onchange = function (event) {
+    activeMealImage = URL.createObjectURL(event.target.files[0]);
+}
+
+
