@@ -47,15 +47,14 @@ let displayMeals = document.querySelector("#meal-list");
 let submitMeal = document.querySelector("#submit-meal");
 let activeMealImage = '';
 
+
 submitMeal.onclick = function (event) {
+    newMeal = new Meal(mealName.value, mealCategory.value, mealOrigin.value, mealCountry.value, mealPicture.value, mealDescription.value);
     event.preventDefault();
-    let newMeal = new Meal(mealName.value, mealCategory.value, mealOrigin.value, mealCountry.value, mealPicture.value, mealDescription.value);
     newMeal._pictures.addMeal(activeMealImage)
     meals.push(newMeal);
 
     displayMeals.innerHTML = meals
-
-    //displayMeals.innerHTML = meals;
     console.log(meals)
 
     // Clear all inputs
@@ -80,5 +79,19 @@ addmealButton.onclick = function () {
 mealPicture.onchange = function (event) {
     activeMealImage = URL.createObjectURL(event.target.files[0]);
 }
+
+//Event listener on added meal image
+
+mealListParent = document.querySelector("#meal-list");
+mealListParent.addEventListener('click', onClickedImage);
+function onClickedImage(e) {
+    console.log(newMeal);
+}
+
+
+
+
+
+
 
 

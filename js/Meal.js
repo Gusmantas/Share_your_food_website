@@ -37,7 +37,7 @@ class Meal {
     }
 
     get picture() {
-        return this._picture;
+        return this._pictures;
     }
 
     get description() {
@@ -46,9 +46,9 @@ class Meal {
 
     toString() {
         return `
-            <section class="image-output">
-                ${this._pictures}
-            </section>
+            
+                <li id= meal-li>${this._pictures}</li>
+            
         `;
     }
 }

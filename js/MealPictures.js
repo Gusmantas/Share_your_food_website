@@ -8,7 +8,7 @@ class MealPictures {
 
     toString() {
         return `
-            ${this.meals.join(' ')}
+        ${this.meals}
         `
     }
 }

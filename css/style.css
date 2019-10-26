@@ -194,11 +194,19 @@ li {
 }
 
 /*Meal picture array settings*/
-.image-output img {
+#meal-list img {
   display: flex;
   height: 300px;
   width: 300px;
   flex-wrap: wrap;
   border-radius: 60px;
   background-size: cover;
+  
 }
+
+#meal-li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
