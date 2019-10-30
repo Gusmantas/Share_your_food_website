@@ -1,9 +1,9 @@
-class MealPictures {
+class MealPictures { //Meal picture array
     pictures = []
 
-    addMeal(meal) {
+    addMealImg(meal) {
         let mealName = document.querySelector("#meal-name");
-        let mealImage = `<img id="${mealName.value}" src="${meal}">`
+        let mealImage = `<img id="${mealName.value}" src="${meal}">`;
         this.pictures.push(mealImage);
     }
 

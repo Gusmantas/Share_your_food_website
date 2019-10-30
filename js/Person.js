@@ -1,4 +1,4 @@
-class Person {
+class Person { //Person superclass, made for creating admins and users
 
 
     _userName = '';

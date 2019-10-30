@@ -1,4 +1,4 @@
-class User extends Person { //Inheritance
+class User extends Person { //Inherits from Person class, to create a user.
 
     _firstName = '';
     _lastName = '';
