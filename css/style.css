@@ -2,8 +2,11 @@
   box-sizing: border-box;
 }
 
-/* removes body tag space gaps*/
+/* removes body tag space gaps, sets background image*/
 body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.452)),
+    url(/images/background.jpg);
+  background-size: cover;
   margin: 0;
 }
 
@@ -17,17 +20,15 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/* sets image to header, and darkens the image*/
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(/images/header\ image.jpg);
-  background-size: cover;
   height: 100vh;
 }
+
 /*Header text position*/
 #header-div {
   position: absolute;
   width: 1140px;
-  top: 50%;
+  top: 30%;
   left: 10%;
 }
 /*Header text settings*/
@@ -106,6 +107,10 @@ button {
   opacity: 0.9;
   border-radius: 60px;
 }
+.navbuttons {
+  width: 95px;
+  height: 95px;
+}
 
 /* Set style for sign in and sign up buttons*/
 #sign-up,
@@ -156,12 +161,20 @@ button:hover {
 form {
   display: none;
   background-color: rgba(170, 146, 9, 0.466);
-  color: rgba(175, 49, 49, 0.774);
+  color: rgba(203, 247, 4, 0.89);
   border-radius: 20px;
   box-shadow: 0 0 9px rgb(250, 5, 5);
   width: 400px;
   height: 735px;
   margin: auto;
+}
+
+#signin_form {
+  height: 360px;
+  padding: 15px;
+  display: none;
+  margin: auto;
+  border: currentColor;
 }
 
 .form-headers {
@@ -182,15 +195,53 @@ li {
 
 /*first paragraph on the page settings */
 #intro {
-  display: flex;
-  font-weight: 400;
-  font-size: 30px;
-  background-color: rgba(37, 236, 11, 0.411);
-  margin: auto;
-  border-radius: 60px;
-  justify-content: center;
-  width: 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: auto;
   padding: 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font: normal 30px/1 "Comic Sans MS", cursive, sans-serif;
+  color: rgba(63, 4, 4, 0.712);
+  text-align: center;
+  text-indent: 10px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: -webkit-linear-gradient(
+    -225deg,
+    rgba(227, 242, 14, 0.81) 0,
+    rgba(124, 188, 10, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    315deg,
+    rgba(227, 242, 14, 0.81) 0,
+    rgba(124, 188, 10, 1) 100%
+  );
+  background: linear-gradient(
+    315deg,
+    rgba(227, 242, 14, 0.81) 0,
+    rgba(124, 188, 10, 1) 100%
+  );
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 7px 7px 11px 4px rgba(0, 0, 0, 0.45) inset,
+    8px -3px 11px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 7px 11px 4px rgba(0, 0, 0, 0.45) inset,
+    8px -3px 11px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 8px -1px 7px rgba(196, 19, 19, 0.57);
+  -webkit-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 /*Meal picture array settings*/
@@ -201,19 +252,19 @@ li {
   flex-wrap: wrap;
   border-radius: 60px;
   background-size: cover;
-  
 }
 
-#meal-li{
+#meal-li {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#meal-object{
+/*Meal object when clicking on added picture settings*/
+#meal-object {
   display: inline-block, none;
   background-color: rgba(170, 146, 9, 0.466);
-  color: rgba(175, 49, 49, 0.774);
+  color: rgba(203, 247, 4, 0.89);
   border-radius: 20px;
   box-shadow: 0 0 9px rgb(250, 5, 5);
   width: 40%;
@@ -223,3 +274,71 @@ li {
   overflow-wrap: break-word;
 }
 
+/*footer and contact us settings*/
+#contacts {
+  display: flex;
+  color: wheat;
+  justify-content: center;
+}
+em {
+  color: #aee62e;
+}
+
+/*"What is food" article settings*/
+
+#food_title {
+  color: #aee62e;
+}
+#what_is_food {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: auto;
+  padding: 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font: normal 30px/1 "Comic Sans MS", cursive, sans-serif;
+  color: rgba(63, 4, 4, 0.712);
+  text-align: center;
+  text-indent: 10px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: -webkit-linear-gradient(
+    -225deg,
+    rgba(227, 242, 14, 0.81) 0,
+    rgba(124, 188, 10, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    315deg,
+    rgba(227, 242, 14, 0.81) 0,
+    rgba(124, 188, 10, 1) 100%
+  );
+  background: linear-gradient(
+    315deg,
+    rgba(227, 242, 14, 0.81) 0,
+    rgba(124, 188, 10, 1) 100%
+  );
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 7px 7px 11px 4px rgba(0, 0, 0, 0.45) inset,
+    8px -3px 11px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 7px 11px 4px rgba(0, 0, 0, 0.45) inset,
+    8px -3px 11px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 8px -1px 7px rgba(196, 19, 19, 0.57);
+  -webkit-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+/*"welcome header on top of page*/
+#welcome_user {
+  color: rgb(238, 255, 0);
+}
