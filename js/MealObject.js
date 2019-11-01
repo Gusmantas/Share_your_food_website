@@ -1,4 +1,4 @@
-class MealObject{ 
+class MealObject {
 
     _name = '';
     _category = '';
@@ -18,10 +18,6 @@ class MealObject{
         return this._name;
     }
 
-    get picture() {
-        return this._picture;
-    }
-
     get category() {
         return this._category;
     }
@@ -38,7 +34,7 @@ class MealObject{
         return this._description;
     }
 
-    toString(){
+    toString() {
         `<li>
             Name: ${this._name}
             <br>
